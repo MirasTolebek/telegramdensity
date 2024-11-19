@@ -1,7 +1,7 @@
 {
     "name": "density_calculator",
     "short_name": "density_calculator",
-    "start_url": "index.html",
+    "start_url": "https://mirastolebek.github.io/telegramdensity/#/",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
