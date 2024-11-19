@@ -56,7 +56,7 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       if (window.Telegram && window.Telegram.WebApp && window.WebApp.requestFullscreen) {
-        window.Telefram.WebApp.requestFullscreen().then(() => {
+        window.Telegram.WebApp.requestFullscreen().then(() => {
           console.log("Fullscreen mode enable");
         }).catch((err) => {
           console.log("Failed to enable fullscreen mode:", err);
