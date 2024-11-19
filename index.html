@@ -60,6 +60,7 @@
       if (window.Telegram && window.Telegram.WebApp) {
         window.Telegram.WebApp.ready();
         window.Telegram.WebApp.requestFullscreen(); // Включение полноэкранного режима
+        window.Telegram.WebApp.requestAddToHomeScreen();
       } else {
         console.error("API Telegram WebApp не доступно.");
       }
