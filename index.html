@@ -58,26 +58,12 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       if (window.Telegram && window.Telegram.WebApp) {
-        window.Telegram.WebApp.ready(); // Готовность API Telegram
-        // Включение полноэкранного режима
-        window.Telegram.WebApp.requestFullscreen()
-          .then(() => {
-            console.log("Fullscreen mode activated.");
-          })
-          .catch((err) => {
-            console.error("Fullscreen mode failed:", err);
-          });
+        window.Telegram.WebApp.ready();
+        window.Telegram.WebApp.requestFullscreen(); // Включение полноэкранного режима
+      } else {
+        console.error("API Telegram WebApp не доступно.");
       }
     });
-      document.addEventListener("DOMContentLoaded", () => {
-    if (window.Telegram && window.Telegram.WebApp) {
-      console.log("API доступно!");
-      // Ваш код для работы с API
-    } else {
-      console.error("Telegram WebApp API не доступно.");
-    }
-});
-
   </script>
 
 </body>
