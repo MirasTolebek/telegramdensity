@@ -60,7 +60,21 @@
       if (window.Telegram && window.Telegram.WebApp) {
         window.Telegram.WebApp.ready();
         window.Telegram.WebApp.requestFullscreen(); // Включение полноэкранного режима
-        window.Telegram.WebApp.AddToHomeScreen();
+        window.Telegram.WebApp.checkHomeScreenStatus((status) => {
+          console.log("Статус ярлыка:", status);
+          if (status.isAvailable) {
+              // Если доступно, запускаем добавление ярлыка
+              window.Telegram.WebApp.addToHomeScreen((result) => {
+                  if (result) {
+                      console.log('Ярлык добавлен');
+                  } else {
+                      console.log('Пользователь отменил добавление ярлыка');
+                  }
+              });
+          } else {
+              console.log('Добавление на главный экран не поддерживается на этом устройстве');
+          }
+      });
       } else {
         console.error("API Telegram WebApp не доступно.");
       }
